@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manufacturer: MyString
+  vehicle_model: MyString
+  color: MyString
+  year_of_manufacture: MyString
+  price: 1.5
+
+two:
+  manufacturer: MyString
+  vehicle_model: MyString
+  color: MyString
+  year_of_manufacture: MyString
+  price: 1.5

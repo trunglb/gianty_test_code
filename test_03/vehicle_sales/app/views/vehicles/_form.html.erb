@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col">
+    <%= form_with(model: vehicle, local: true) do |form| %>
+      <% if vehicle.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+
+          <ul>
+          <% vehicle.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= form.label :manufacturer %>
+        <%= form.text_field :manufacturer, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :vehicle_model %>
+        <%= form.text_field :vehicle_model, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :color %>
+        <%= form.text_field :color, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :year_of_manufacture %>
+        <%= form.text_field :year_of_manufacture, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :price %>
+        <%= form.text_field :price, class: "form-control" %>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn btn-success">
+          Submit
+        </button>
+      </div>
+      <br>
+    <% end %>
+  </div>
+</div>
